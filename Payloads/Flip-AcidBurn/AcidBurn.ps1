@@ -376,7 +376,7 @@ if (!$Networks) { Write-Host "variable is null"
 
 # this is the message that will be coded into the image you use as the wallpaper
 
-	$hiddenMessage = "`n`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back `n with love -Jakoby"
+	$hiddenMessage = "`n`nMy crime is that of curiosity `nand you're not a total n3wb for being able to find this message.... Kudos..."
 
 # this will be the name of the image you use as the wallpaper
 
@@ -554,7 +554,7 @@ echo "Email Done"
 	This function will run all the previous functions and assign their outputs to variables
 #>
 
-$intro = "$fullName , it has been a long time my friend"
+$intro = "Hello, it has been a long time my friend"
 
 $RAMwarn = Get-RAM  
 
@@ -566,7 +566,7 @@ $LAST_PASSwarn =  Get-Days_Set
 
 $EMAILwarn = Get-email 
 
-$OUTRO =  "My crime is that of curiosity.... 	and yea curiosity killed the cat....     but satisfaction brought him back.... later $fullName"
+$OUTRO =  "My crime is that of curiosity.... 	and your's is that of needing better security protocols.... later nerd..."
 
 # echo statement used to track progress while debugging
 echo "Speak Variables set"
@@ -593,7 +593,7 @@ echo "Volume to max level"
 
 # a popup will be displayed before freezing the script while waiting for the cursor to move to continue the script
 # else capslock light will blink as an indicator
-$popmessage = "Hello $fullName"
+$popmessage = "Hello Freind!"
 
 
 $readyNotice = New-Object -ComObject Wscript.Shell;$readyNotice.Popup($popmessage)
@@ -662,9 +662,9 @@ $s.Speak($OUTRO)
 
 # this snippet will leave a message on your targets desktop 
 
-$message = "`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back"
+$message = "`nMy crime is that of curiosity `nNow get to work on fixing your security issues..."
 
-Add-Content $home\Desktop\WithLove.txt $message
+Add-Content $home\Desktop\LaterNerd.txt $message
 ###########################################################################################################
 
 <#
