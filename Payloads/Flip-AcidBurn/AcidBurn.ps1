@@ -554,7 +554,7 @@ echo "Email Done"
 	This function will run all the previous functions and assign their outputs to variables
 #>
 
-$intro = "Hello, it has been a long time my friend"
+$intro = "Trevor Knapp, it has been a long time my friend"
 
 $RAMwarn = Get-RAM  
 
@@ -566,7 +566,7 @@ $LAST_PASSwarn =  Get-Days_Set
 
 $EMAILwarn = Get-email 
 
-$OUTRO =  "My crime is that of curiosity.... 	and your's is that of needing better security protocols.... later nerd..."
+$OUTRO =  "My crime is that of curiosity.... 	and your's is that of needing better security protocols.... later Trevor..."
 
 # echo statement used to track progress while debugging
 echo "Speak Variables set"
@@ -593,7 +593,7 @@ echo "Volume to max level"
 
 # a popup will be displayed before freezing the script while waiting for the cursor to move to continue the script
 # else capslock light will blink as an indicator
-$popmessage = "Hello Freind!"
+$popmessage = "Hello Trevor Knapp"
 
 
 $readyNotice = New-Object -ComObject Wscript.Shell;$readyNotice.Popup($popmessage)
