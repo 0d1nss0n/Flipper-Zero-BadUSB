@@ -1,3 +1,25 @@
+#########################################################################################################################################
+#                     #                  ;                                                                                              #
+#                     #           :      ED.                                                      :                                     #
+# Title: Acidburn     #          t#,     E#Wi             L.                      .        .     t#,     L.                             #
+# Author: I-Am-Jakoby #         ;##W.    E###G.       t   EW:        ,ft         ;W       ;W    ;##W.    EW:        ,ft                 #
+# Edited: 0d1nss0n    #        :#L:WE    E#fD#W;      Ej  E##;       t#E        f#E      f#E   :#L:WE    E##;       t#E                 #
+# Category: Prank     #       .KG  ,#D   E#t t##L     E#, E###t      t#E      .E#f     .E#f   .KG  ,#D   E###t      t#E                 #
+# Target: Win 7/10/11 #       EE    ;#f  E#t  .E#K,   E#t E#fE#f     t#E     iWW;     iWW;    EE    ;#f  E#fE#f     t#E                 #
+# Mode: HID           #      f#.     t#i E#t    j##f  E#t E#t D#G    t#E    L##Lffi  L##Lffi f#.     t#i E#t D#G    t#E                 #
+# Version: 2.0        #      :#G     GK  E#t    :E#K: E#t E#t  f#E.  t#E   tLLG##L  tLLG##L  :#G     GK  E#t  f#E.  t#E                 #
+#                     #       ;#L   LW.  E#t   t##L   E#t E#t   t#K: t#E     ,W#i     ,W#i    ;#L   LW.  E#t   t#K: t#E                 #
+#                     #        t#f f#:   E#t .D#W;    E#t E#t    ;#W,t#E    j#E.     j#E.      t#f f#:   E#t    ;#W,t#E                 #
+#                     #         f#D#;    E#tiW#G.     E#t E#t     :K#D#E  .D#j     .D#j         f#D#;    E#t     :K#D#E                 #
+#                     #          G#t     E#K##i       E#t E#t      .E##E ,WK,     ,WK,           G#t     E#t      .E##E                 #
+#                     #           t      E##D.        E#t ..         G#E EG.      EG.             t      ..         G#E                 #
+#                     #                  E#t          ,;.             fE ,        ,                                  fE                 #
+#                     #                  L:                            ,                                              ,                 #
+#########################################################################################################################################
+# 
+#   github.com/0d1nss0n
+#
+############################################################################################################################################################
 #
 # Original script made by I-Am-Jakoby // I only modified the parts that did not work for me to get all of the functions to operate. 
 #
