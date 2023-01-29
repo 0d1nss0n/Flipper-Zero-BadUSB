@@ -526,7 +526,7 @@ echo "Email Done"
 	This function will run all the previous functions and assign their outputs to variables
 #>
 
-$intro = "$fullName , it has been a long time my friend"
+$intro = "$fullName , welcome to the show. You are going to get a kick out of this..."
 
 $RAMwarn = Get-RAM  
 
@@ -634,7 +634,7 @@ $s.Speak($OUTRO)
 
 $message = "`nMy crime is that of curiosity`nNow work on getting better with your security practices"
 
-Add-Content $home\Desktop\WithLove.txt $message
+Add-Content $home\Desktop\PeaceOut.txt $message
 ###########################################################################################################
 
 <#
