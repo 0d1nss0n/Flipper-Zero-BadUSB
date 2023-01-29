@@ -17,7 +17,7 @@ $s=New-Object -ComObject SAPI.SpVoice
 
     try {
 
-    $fullName = Net User $Env:username | Select-String -Pattern "User Name";$fullName = ("$fullName").TrimStart("User Name")
+    $fullName = Net User $Env:username | Select-String -Pattern "User Name";$fullName = ("$fullName").TrimStart("User name")
 
     }
  
