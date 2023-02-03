@@ -7,7 +7,7 @@
 # Category: Prank     #       .KG  ,#D   E#t t##L     E#, E###t      t#E      .E#f     .E#f   .KG  ,#D   E###t      t#E                 #
 # Target: Win 7/10/11 #       EE    ;#f  E#t  .E#K,   E#t E#fE#f     t#E     iWW;     iWW;    EE    ;#f  E#fE#f     t#E                 #
 # Mode: HID           #      f#.     t#i E#t    j##f  E#t E#t D#G    t#E    L##Lffi  L##Lffi f#.     t#i E#t D#G    t#E                 #
-# Version: 2.0        #      :#G     GK  E#t    :E#K: E#t E#t  f#E.  t#E   tLLG##L  tLLG##L  :#G     GK  E#t  f#E.  t#E                 #
+# Version: 2.1        #      :#G     GK  E#t    :E#K: E#t E#t  f#E.  t#E   tLLG##L  tLLG##L  :#G     GK  E#t  f#E.  t#E                 #
 #                     #       ;#L   LW.  E#t   t##L   E#t E#t   t#K: t#E     ,W#i     ,W#i    ;#L   LW.  E#t   t#K: t#E                 #
 #                     #        t#f f#:   E#t .D#W;    E#t E#t    ;#W,t#E    j#E.     j#E.      t#f f#:   E#t    ;#W,t#E                 #
 #                     #         f#D#;    E#tiW#G.     E#t E#t     :K#D#E  .D#j     .D#j         f#D#;    E#t     :K#D#E                 #
