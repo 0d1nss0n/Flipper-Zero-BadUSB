@@ -6,12 +6,20 @@ If you would like to support the work that I do, please consider becoming a subs
 
 [SUBSCRIBE](https://jakoby.lol/tah)
 
+Or you can donate to me directly through [paypal](https://www.paypal.com/donate/?hosted_button_id=5JSES9MLW7N3Q)
+
+<p align="center">
+      <a href="https://www.paypal.com/donate/?hosted_button_id=5JSES9MLW7N3Q">
+        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/Assets/paypal.png width="50" alt="Python" />
+      </a>	
+</p>
+
 *CURRENT SUBSCRIBERS*
 
 <img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/Ghost-Coin.gif"/>
 <img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/DelilahCoin.gif"/>  
 <img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/cersei-Coin.gif"/>    
-<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/matzeCoin.gif"/>
+
 
 The more I grow this project the more I am spending to optimize it. All support is greatly appreciated. 
 
@@ -62,6 +70,7 @@ This in turn makes it so the user no longer has to host their own version of the
 
 | Payloads                                                                                                        | Description                                                                                       | Plug'n'Play | Author      |
 | :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----------| :-----------|
+| [Evil-Goose](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-EvilGoose)              | A payload that hires a goose to hack your target in real time                                     |✅           | Jakoby      |      
 | [ADV-Recon](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ADV-Recon)               | A script used to do an advanced level of Recon on the targets computer.                           |✅           | Jakoby      |      
 | [AcidBurn](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-AcidBurn)                 | A script I put together to be used on your friends as well.. or Foes. Prepare to be roasted       |✅           | Jakoby      | 
 | [Jump-Scare](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-JumpScare)              | Just a little jumpscare that changes the targets wallpaper                                        |✅           | Jakoby      |
@@ -80,6 +89,7 @@ This in turn makes it so the user no longer has to host their own version of the
 | [Credz-Plz](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-Credz-Plz)               | A script used to prompt the target to enter their creds to later be exfiltrated                   |✅           | Jakoby      |
 | [Shortcut Jacker](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ShortcutJacker)    | A script used to embed malware in the shortcut on your targets desktop                            |⛔           | Jakoby      |
 | [Wifi Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-WifiGrabber/README.md)| Grabs your targets wifi passwords and uploads them to either Dropbox, Discord, or both            |✅           | Jakoby      |
+| [IP Grabber](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-IP-Grabber)             | Grabs your targets IP addresses and uploads them to either Dropbox, Discord, or both              |✅           | Jakoby      |
 | [Browser Data](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/blob/main/Payloads/Flip-BrowserData/README.md)| This payload can be used to retrieve the browsing history and bookmarks of your target            |✅           | Jakoby      |
 
 <!-- CONTACT -->
