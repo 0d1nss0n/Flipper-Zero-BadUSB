@@ -2,26 +2,11 @@
 
 # 🐬 Flipper-Zero-BadUSB 🐬
 
-If you would like to support the work that I do, please consider becoming a subscriber in our Discord.
-
-[SUBSCRIBE](https://jakoby.lol/tah)
-
-Or you can donate to me directly through [paypal](https://www.paypal.com/donate/?hosted_button_id=5JSES9MLW7N3Q)
-
 <p align="center">
-      <a href="https://www.paypal.com/donate/?hosted_button_id=5JSES9MLW7N3Q">
-        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/Assets/paypal.png width="50" alt="Python" />
+      <a href="https://github.com/sponsors/I-Am-Jakoby">
+        <img src=https://github.com/I-Am-Jakoby/I-Am-Jakoby/blob/main/img/Discord-Sponsor.png width="125" alt="Python" />
       </a>	
 </p>
-
-*CURRENT SUBSCRIBERS*
-
-<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/Ghost-Coin.gif"/>
-<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/DelilahCoin.gif"/>  
-<img src="https://github.com/I-Am-Jakoby/I-Am-Jakoby/raw/main/discord-subscribers/cersei-Coin.gif"/>    
-
-
-The more I grow this project the more I am spending to optimize it. All support is greatly appreciated. 
 
 Subscribing to my YouTube would also be really appreciated. 
 
@@ -70,6 +55,7 @@ This in turn makes it so the user no longer has to host their own version of the
 
 | Payloads                                                                                                        | Description                                                                                       | Plug'n'Play | Author      |
 | :-------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-----------| :-----------|
+| [VoiceLogger](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/VoiceLogger)                | Activates your targets microphone and converts their speech to text and exfils it to discord      |✅           | Jakoby      |
 | [Evil-Goose](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-EvilGoose)              | A payload that hires a goose to hack your target in real time                                     |✅           | Jakoby      |      
 | [ADV-Recon](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-ADV-Recon)               | A script used to do an advanced level of Recon on the targets computer.                           |✅           | Jakoby      |      
 | [AcidBurn](https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/tree/main/Payloads/Flip-AcidBurn)                 | A script I put together to be used on your friends as well.. or Foes. Prepare to be roasted       |✅           | Jakoby      | 
