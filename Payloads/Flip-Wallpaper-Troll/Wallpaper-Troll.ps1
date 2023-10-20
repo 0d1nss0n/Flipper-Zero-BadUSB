@@ -266,8 +266,8 @@ Add-Type -AssemblyName System.Drawing
 $filename = "$env:tmp\foo.jpg" 
 $bmp = new-object System.Drawing.Bitmap $w,$h 
 $font = new-object System.Drawing.Font Consolas,18 
-$brushBg = [System.Drawing.Brushes]::White 
-$brushFg = [System.Drawing.Brushes]::Black 
+$brushBg = [System.Drawing.Brushes]::Black 
+$brushFg = [System.Drawing.Brushes]::LimeGreen 
 $graphics = [System.Drawing.Graphics]::FromImage($bmp) 
 $graphics.FillRectangle($brushBg,0,0,$bmp.Width,$bmp.Height) 
 $graphics.DrawString($content,$font,$brushFg,500,100) 
