@@ -25,7 +25,6 @@ param (
 [Parameter (Mandatory = $True, Position=0, ValueFromPipeline = $True)]
 [string]$channel
 )
-
 Add-Type -AssemblyName System.Windows.Forms
 $o=New-Object -ComObject WScript.Shell
 $url = -join($channel,"?sub_confirmation=1")

