@@ -32,21 +32,23 @@ Add-Type -AssemblyName System.Windows.Forms
 
 # The number of times you want it to cycle through your list of questions
 
-$cycles = 3
+$cycles = 1
 
 # List as many questions here as you like, it will cycle through all of them
 
 $msgs = @(
-"Are all scammers as dumb as you?"
-"Is the pay worth being this big of a loser?"
-"Do your parents know what you do for a living?"
-"Does you boss know much much you suck at this job?"
+"Oh, ladies and gentlemen, buckle up, because we have got John the software developer in the house! Give it up for John, the guy who writes code faster than he can order a pizza. Seriously, John, your code is like a bad delivery – it takes forever, and when it finally arrives, you wish you would have ordered from a different place."
+"I heard John's code is so inefficient, they are thinking of renaming it from Pizza Point-of-Sale to Pizza Point-of-Fail. I mean, come on, John, even my grandma's rotary phone has better response time than your software."
+"And let's talk about John's coding style – it's like trying to read hieroglyphics after a night of heavy drinking. I asked him for some clean code once, and he handed me a napkin with spaghetti sauce stains. Real professional, John."
+"But hey, give John a break, he's a software developer at a pizza POS company. His code might be a mess, but at least it's not as cheesy as the excuses he gives for those bugs. 'Oh, it's not a bug, it's a feature!' No, John, it's a disaster."
+"I hear John's idea of version control is writing 'final_final_version_v2.0_final_really_this_time' at the end of every file. No wonder his colleagues have started calling him the 'Commit King' – because every time he commits, the whole team wants to commit to finding a new job."
+"But in all seriousness, John, keep doing your thing. Who knows, maybe one day your code will be so legendary, they'll name a pizza after it – the 'Buffer Overflow Supreme.' Just make sure it doesn't crash halfway through eating it. Cheers, John!"
 )
 
 for ($i=1; $i -le $cycles; $i++) {
 
 Foreach ($msg in $msgs) {
-[System.Windows.Forms.MessageBox]::Show($msg , "You're-a-Loser.exe" , 4 , 'Question')
+[System.Windows.Forms.MessageBox]::Show($msg , "Booo John, Boooo.exe" , 4 , 'Question')
 }
 }
 
