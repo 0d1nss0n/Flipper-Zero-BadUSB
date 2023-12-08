@@ -32,7 +32,7 @@ Add-Type -AssemblyName System.Windows.Forms
 
 # The number of times you want it to cycle through your list of questions
 
-$cycles = 3
+$cycles = 20
 
 # List as many questions here as you like, it will cycle through all of them
 
