@@ -579,6 +579,8 @@ $k=[Math]::Ceiling(100/2);$o=New-Object -ComObject WScript.Shell;for($i = 0;$i -
 # echo statement used to track progress while debugging
 echo "Volume to max level"
 
+Minimize-All
+
 ###########################################################################################################
 
 <#
@@ -646,8 +648,6 @@ $s.Speak($RAMwarn)
 $s.Speak($PUB_IPwarn)
 
 $s.Speak($PASSwarn)
-
-Minimize-All
 
 WallPaper-Troll
 
