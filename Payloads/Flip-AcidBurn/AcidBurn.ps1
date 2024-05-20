@@ -657,6 +657,27 @@ $s.Speak($EMAILwarn)
 
 $s.Speak($OUTRO)
 
+###########################################################################################################
+
+$imageUrl = "https://raw.githubusercontent.com/0d1nss0n/Flipper-Zero-BadUSB/main/Payloads/Flip-WallPaper-URL/heman-rainbow.jpg"
+$destinationPath = "$env:USERPROFILE\heman-rainbow.jpg"
+
+Invoke-WebRequest -Uri $imageUrl -OutFile $destinationPath
+
+$code = @"
+using System.Runtime.InteropServices;
+public class Wallpaper {
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]
+    public static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+}
+"@
+Add-Type -TypeDefinition $code
+
+$SPI_SETDESKWALLPAPER = 0x0014
+$SPIF_UPDATEINIFILE = 0x01
+$SPIF_SENDWININICHANGE = 0x02
+
+[Wallpaper]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, $destinationPath, $SPIF_UPDATEINIFILE -bor $SPIF_SENDWININICHANGE)
 
 ###########################################################################################################
 # this will launch the desktop goose and 
